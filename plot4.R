@@ -5,10 +5,11 @@ dateandtime <- paste(as.Date(feb_data$Date,format="%d/%m/%Y"), feb_data$Time)
 dateandtime <- strptime(dateandtime,"%Y-%m-%d %H:%M:%S")
 
 par(mfrow=c(2,2))
+
 ##Draw Plot1
 plot(dateandtime, as.numeric(as.character(feb_data$Global_active_power)), type="l", ylab="Global Active Power", xlab="" )
 
-##Draw Plot1
+##Draw Plot2
 plot(dateandtime, as.numeric(as.character(feb_data$Voltage)), type="l", ylab="Voltage", xlab="datetime" )
 
 ##Draw Plot3
