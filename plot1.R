@@ -1,0 +1,6 @@
+data <- read.csv("data/household_power_consumption.txt", header=TRUE, sep=";")
+feb_data <- subset(data,data$Date=='1/2/2007' | data$Date=='2/2/2007')
+remove(data)
+hist(as.numeric(as.character(feb_data$Global_active_power)),col="red",main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency")
+dev.copy(png,"plot1.png", width=480, height=480)
+dev.off()
